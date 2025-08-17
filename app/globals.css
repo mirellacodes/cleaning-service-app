@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Natural color palette for cleaning service app - Bright Light Theme */
+  --background: #fefae0; /* Cornsilk - Light cream background */
+  --foreground: #1a1a1a; /* Near black for excellent readability */
+  --card: #ffffff; /* Pure white cards for contrast */
+  --card-foreground: #1a1a1a; /* Near black text on white cards */
+  --popover: #ffffff; /* Pure white popovers */
+  --popover-foreground: #1a1a1a; /* Near black text on white popovers */
+  --primary: #606c38; /* Dark moss green - Primary brand color */
+  --primary-foreground: #ffffff; /* White text on primary */
+  --secondary: #dda15e; /* Earth yellow - Secondary accent */
+  --secondary-foreground: #1a1a1a; /* Near black text on secondary */
+  --muted: #f8f9fa; /* Very light gray - Muted backgrounds */
+  --muted-foreground: #6b7280; /* Medium gray - Muted text */
+  --accent: #bc6c25; /* Tiger's eye - Accent color */
+  --accent-foreground: #ffffff; /* White text on accent */
+  --destructive: #dc2626; /* Red for destructive actions */
+  --destructive-foreground: #ffffff; /* White text on destructive */
+  --border: #e5e7eb; /* Light gray borders */
+  --input: #ffffff; /* White input backgrounds */
+  --ring: #606c38; /* Dark moss green - Focus rings */
+  --chart-1: #606c38; /* Dark moss green */
+  --chart-2: #283618; /* Pakistan green */
+  --chart-3: #dda15e; /* Earth yellow */
+  --chart-4: #bc6c25; /* Tiger's eye */
+  --chart-5: #a9b876; /* Medium moss green */
+  --radius: 0.5rem;
+  --sidebar: #f8f9fa; /* Very light gray - Sidebar background */
+  --sidebar-foreground: #1a1a1a; /* Near black - Sidebar text */
+  --sidebar-primary: #606c38; /* Dark moss green - Sidebar primary */
+  --sidebar-primary-foreground: #ffffff; /* White text on sidebar primary */
+  --sidebar-accent: #bc6c25; /* Tiger's eye - Sidebar accent */
+  --sidebar-accent-foreground: #ffffff; /* White text on sidebar accent */
+  --sidebar-border: #e5e7eb; /* Light gray - Sidebar borders */
+  --sidebar-ring: #606c38; /* Dark moss green - Sidebar focus rings */
+}
+
+.dark {
+  --background: #13160b; /* Very dark moss green - Dark background */
+  --foreground: #e2e7d1; /* Light moss green - Light text */
+  --card: #1f2a13; /* Dark Pakistan green - Dark cards */
+  --card-foreground: #e2e7d1; /* Light moss green - Light text on dark cards */
+  --popover: #1f2a13; /* Dark Pakistan green - Dark popovers */
+  --popover-foreground: #e2e7d1; /* Light moss green - Light text on dark popovers */
+  --primary: #a9b876; /* Medium moss green - Primary in dark mode */
+  --primary-foreground: #13160b; /* Very dark moss green - Dark text on primary */
+  --secondary: #bc6c25; /* Tiger's eye - Secondary in dark mode */
+  --secondary-foreground: #e2e7d1; /* Light moss green - Light text on secondary */
+  --muted: #262b16; /* Dark moss green - Muted backgrounds */
+  --muted-foreground: #88994f; /* Medium moss green - Muted text */
+  --accent: #dda15e; /* Earth yellow - Accent in dark mode */
+  --accent-foreground: #13160b; /* Very dark moss green - Dark text on accent */
+  --destructive: #ef4444; /* Red for destructive actions */
+  --destructive-foreground: #e2e7d1; /* Light moss green - Light text on destructive */
+  --border: #394121; /* Medium moss green - Dark borders */
+  --input: #262b16; /* Dark moss green - Dark input backgrounds */
+  --ring: #a9b876; /* Medium moss green - Focus rings in dark mode */
+  --chart-1: #a9b876; /* Medium moss green */
+  --chart-2: #88994f; /* Light moss green */
+  --chart-3: #dda15e; /* Earth yellow */
+  --chart-4: #bc6c25; /* Tiger's eye */
+  --chart-5: #80ac4d; /* Light Pakistan green */
+  --sidebar: #1f2a13; /* Dark Pakistan green - Dark sidebar */
+  --sidebar-foreground: #e2e7d1; /* Light moss green - Light sidebar text */
+  --sidebar-primary: #a9b876; /* Medium moss green - Dark sidebar primary */
+  --sidebar-primary-foreground: #13160b; /* Very dark moss green - Dark text on sidebar primary */
+  --sidebar-accent: #dda15e; /* Earth yellow - Dark sidebar accent */
+  --sidebar-accent-foreground: #13160b; /* Very dark moss green - Dark text on sidebar accent */
+  --sidebar-border: #394121; /* Medium moss green - Dark sidebar borders */
+  --sidebar-ring: #a9b876; /* Medium moss green - Dark sidebar focus rings */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
